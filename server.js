@@ -59,7 +59,9 @@ var webRoute = {
     '/editbook': 'editbook',
     '/delbook': 'delbook',
     '/detail/:isbn': 'detail',
-    '/savecomment': 'savecomment'
+    '/savecomment': 'savecomment',
+    '/api/search/list':'apiSearchBook',
+     '/api/search/detail':'apiBookDetail'
 };
 _.each(webRoute, function (v, i) {
    app.all('/' + rootDir + i, routes.login, routes[v]);

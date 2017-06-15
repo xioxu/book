@@ -67,8 +67,7 @@ ul, li {
 	-o-transition: opacity 0.2s ease-out;
 	-ms-transition: opacity 0.2s ease-out;
 	transition: opacity 0.2s ease-out;
-	opacity: 0.15;
-	filter: alpha(opacity=15);
+	color:white;
 }
 
 .footer {
@@ -185,6 +184,8 @@ ul, li {
 	height: 48px;
 	opacity: 0;
 	filter: alpha(opacity=0);
+	color: white;
+	font-size: 32px;
 }
 
 .banner .banner-switch .switch-bar {
@@ -384,4 +385,9 @@ ul, li {
 
 .lg-reg a {
 	color: #ff9600;
+}
+
+label.required:after {
+ content:"*";
+ color:red;
 }

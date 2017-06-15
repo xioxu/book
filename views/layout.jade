@@ -1,4 +1,4 @@
-doctype 5
+doctype html
 html
 	head
 		meta(charset="UTF-8")
@@ -25,12 +25,12 @@ html
 			div.banner
 				div.container
 					div.banner-switch
-						img.thumb(src="/images/f2e-thumb.png", width="300", height="240")
-						img.intro(src="/images/f2e-intro.png", width="605", height="48")
-						img.thumb(src="/images/f2e-thumb.png", width="300", height="240")
-						img.intro(src="/images/f2e-intro.png", width="605", height="48")
-						img.thumb(src="/images/f2e-thumb.png", width="300", height="240")
-						img.intro(src="/images/f2e-intro.png", width="605", height="48")
+						img.thumb(src="/images/1.jpg", width="300", height="240")
+						label.intro(width="605", height="48") 阅读的乐趣
+						img.thumb(src="/images/2.jpg", width="300", height="240")
+						label.intro(width="605", height="48") 知识的分享
+						img.thumb(src="/images/4.png", width="300", height="240")
+						label.intro(width="605", height="48") 精选的书籍
 						ul.switch-bar
 							li.item.select 
 							li.item 
@@ -39,7 +39,7 @@ html
 				block content
 			div.yahei.footer
 				div.container
-					&copy; UX&nbsp;&nbsp;
+					&copy; CROSS&nbsp;&nbsp;
 					- var adm = typeof isadmin === "undefined" ? 0 : isadmin;
 					- if(adm != 0)
 						| <a href="/book/addbook">添加图书</a>&nbsp;&nbsp;

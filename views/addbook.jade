@@ -7,17 +7,44 @@ block content
 		div.alert.alert-info= success
 	form.form-horizontal(action="/book/savebook", method="get")
 		div.control-group
-			label.control-label(for="LB-isbn") ISBN编码:
+			label.control-label(for="bookname",class="required") 图书名称:
 			div.controls
-				input.input-large(type="text", name="isbn", id="LB-ISBN", placeholder="请填写图书ISBN编码")
+				input.input-large(type="text",required="true", name="bookname", id="bookname", placeholder="请填写图书名称:")
+
 		div.control-group
-			label.control-label(for="LB-bookcate") 图书分类:
+			label.control-label(for="LB-number",class="required") 可借册数:
 			div.controls
-				input.input-large(type="text", name="bc", id="LB-bookcate", placeholder="图书分类（1,2,3）")
+				input.input-large(type="text", required="true",name="number", id="LB-number", placeholder="可借册数")
 		div.control-group
-			label.control-label(for="LB-number") 可借册数:
+			label.control-label(for="LB-isbn",class="required") ISBN编码:
 			div.controls
-				input.input-large(type="text", name="number", id="LB-number", placeholder="可借册数（1,2,3）", value="1")
+				input.input-large(type="text", name="isbn", required="true",id="LB-ISBN", placeholder="请填写图书ISBN编码")
+
+		div.control-group
+			label.control-label(for="LB-bookcate",class="required") 图书分类:
+			div.controls
+				input.input-large(type="text", name="bc",required="true", id="LB-bookcate", placeholder="图书分类（1,2,3）")
+
+		div.control-group
+			label.control-label(for="author") 作者:
+			div.controls
+				input.input-large(type="text", name="author", id="author", placeholder="作者")
+
+		div.control-group
+			label.control-label(for="publisher") 出版社:
+			div.controls
+				input.input-large(type="text", name="publisher", id="publisher", placeholder="请填写出版社")
+		div.control-group
+			label.control-label(for="recommend") 图书备注:
+			div.controls
+				input.input-large(type="text", name="recommend", id="recommend", placeholder="图书备注")
+
+		div.control-group
+			label.control-label(for="pubdate") 出版日期:
+			div.controls
+				input.input-large(type="date", name="pubdate", id="pubdate", placeholder="出版日期")
+
+
 		div.control-group
 			div.controls
 				input.btn.btn-primary(type="submit", value="添加")

@@ -28,17 +28,21 @@ exports.del = function(data, callback){
 
 // 登录
 exports.login = function(req, res, callback){
-	var user_info = req.cookies.user_info;
+	var user_info = "{'WangWang': '001','Email': 'x@x.com','WorkId': '1'}";
+//req.cookies.user_info;
+
+
 	if (!user_info) {
 		// 接入UX平台登录功能，野草负责
-		res.redirect('http://ux.etao.net/api/ucenter/userauth.php?domain=uxx.etao.net&url=http%3A%2F%2Fuxx.etao.net%3A' + res.app.get('port') + '/book');
+		res.redirect('http://ux.etao.com/api/ucenter/userauth.php?domain=uxx.etao.net&url=http%3A%2F%2Fuxx.etao.net%3A' + res.app.get('port') + '/book');
 	} else {
-		var user_info_ob = JSON.parse(decodeURIComponent(user_info)).data;
+		var user_info_ob = {'WangWang': '001','Email': 'x@x.com','WorkId': '1'};// JSON.parse(decodeURIComponent(user_info)).data;
 
 		user_info_ob = {
 			nick: user_info_ob.WangWang,
 			email: user_info_ob.Email,
-			work_id: user_info_ob.WorkId
+			work_id: user_info_ob.WorkId,
+			isadmin:true
 		};
 
 
